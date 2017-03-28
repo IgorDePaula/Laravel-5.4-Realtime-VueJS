@@ -8,11 +8,6 @@
   import Vue from 'vue'
   export default {
     channel: 'chat',
-    echo: {
-      'MensagemEvent': (payload, vm) => {
-        console.log('new message from team', payload);
-      }
-    },
     mounted(){
       this.$echo.join(`chat`)
         .here((users) => {
